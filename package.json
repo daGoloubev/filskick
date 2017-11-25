@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "start_nodemon": "nodemon ./bin/www",
+    "start_browser-sync": "browser-sync start --proxy localhost:3000 --files public",
+    "win_start": "SET DEBUG=filskick:* & npm start",
+    "win_start_nodemon": "SET DEBUG=filskick:* & npm run start_nodemon",
+    "win_start_browser-sync": "SET DEBUG=filskick:* & npm run start_browser-sync"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -14,5 +19,9 @@
     "morgan": "~1.9.0",
     "multer": "^1.3.0",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "nodemon": "^1.12.1"
   }
 }
