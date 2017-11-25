@@ -15,7 +15,7 @@ router.get('/', function(req, res, next){
   res.render('index', {title: 'Express'})
 });
 
-router.post('/', upload.single('imageupload'), function(req,res){
+router.post('/', upload.single('selected_file'), function(req,res){
   res.send('File upload sucessfully.');
 });
 
